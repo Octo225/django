@@ -27,9 +27,12 @@ urlpatterns = [
     path('contacto/', views.contacto, name="Contacto"),
     path('formulario/', views.formulario, name="Formulario"),
     path('ejemplo/', views.ejemplo, name="Ejemplo"),
-
+    path('comentario/',views_registros.registros, name="Comentario"),
+    path('registrar/',views_registros.registrar,name="Registrar"),
 ]
 
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

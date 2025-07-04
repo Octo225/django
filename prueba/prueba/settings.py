@@ -127,3 +127,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
+
+CKEDITOR_CONFIGS ={
+    'default':{
+        'toolbar':'Custom',
+        'toolbar_custom':[
+            ['BOld', 'Italic','Underline'],
+            ['NumberedList','BulletedList','-','Outdent','-','JustifyLeft','JustifyRight','JustifyBlock'],
+            ['Link','Unlink'],
+        ]
+    }
+}

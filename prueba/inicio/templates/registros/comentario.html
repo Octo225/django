@@ -1,0 +1,39 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo %}Principal {% endblock %}
+
+{% block imagen %}
+	{% load static %}
+	{%static ''%}
+{% endblock %}
+{% block pag %}Comentarios {% endblock %}
+
+			<!--Encabezdo -->
+			{% block encabezado %}
+			<h3>Alumnos
+				<small>Lista de Comentarios </small></h3>
+			{% endblock %}
+			<!-- /Encabezado-->
+
+
+{% block contenido %}
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Mensaje</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+	<tbody>
+		{% for comentario in comentarios %}
+		<tr>
+			<td class="text-semibold">{{ comentario.usuario }}</td>
+			<td class="text-semibold">{{ comentario.mensaje }}</td>
+			<td class=>Eliminar</td>
+			<td class=>Editar</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}

@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Alumnos
 from .models import Comentario
+from .models import ComentarioContacto
 
 
 # Register your models here.
@@ -21,3 +22,11 @@ class AdministrarComentarios(admin.ModelAdmin):
     date_hierarchy= 'created'
 
 admin.site.register(Comentario, AdministrarComentarios)
+
+class AdministrarComentariosContacto(admin.ModelAdmin):
+    ist_display = ('id', 'mensaje')
+    earch_fields = ('id','created')
+    ate_hierarchy = 'created'
+    eadonly_fields = ('created', 'id')
+    
+admin.site.register(ComentarioContacto, AdministrarComentariosContacto)

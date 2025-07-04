@@ -52,62 +52,44 @@
 
 <body>
 
+	
 
-
+ 	<div class="page-container">
 
 
 		<!-- Barra de menú -->
 		<div class="sidebar">
-
-			<div class="user-menu dropdown">
-				<a href="#">
-					<img src="{% block imagen %} {% endblock %}">
-					<div class="user-info">
-						{% block pag %} {% endblock %}
- 						<span>DSM</span>
-					</div>
-				</a>
-			</div>
-
 			<div class="sidebar-content">
 				<!-- Menú de navegación -->
 				<ul class="navigation">
 							<li><a href="{% url 'Principal'%}">Principal</a></li>
-							<li><a href="{% url 'Formulario'%}">Registro</a></li>
-							<li><a href="{% url 'Contacto'%}">Contacto</a></li>
-							<li><a href="{% url 'Comentario'%}">Comentarios</a></li>
+							<li><a href="{% url 'Registro'%}">Registro</a></li>
+							<li><a href="{% url 'Contacto'%}">Contacto</a></li>				
 				</ul>
 				<!-- /Fin menú -->
 			</div>
 		</div>
-
-
 		<!-- /sidebar -->
-		<div class="page-content">
+
+
+		<!-- Contenido Principal-->
+	 	<div class="page-content">
+
+
+			<!--Encabezdo -->
 			<div class="page-header">
 				<div class="page-title">
-					{%block encabezado%}{% endblock %}
+					<h3>Alumnos
+				    <small>Lista de Alumnos </small></h3>
 				</div>
+
+				
 			</div>
+			<!-- /Encabezado-->
 
-			<div class="breadcrumb-line">
-				<ul class="breadcrumb">
-					<a href="{%url 'Principal'%}">
-						{%if request.path == '/'%}
-						Principal
-						{%else%}
-							Principal{{request.path}}
-						{%endif%}
-					</a>
-				</ul>
-			</div>
+
 		</div>
-		<div class="page-content">
-
-			{% block contenido %}{% endblock %}
-		</div>
-
+		<!-- /Contenido Principal-->
 	</div>
-
 </body>
 </html>
