@@ -23,12 +23,12 @@ from registros import views as views_registros
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views_registros.registros, name="Principal"),
-    path('', views.principal, name="Principal"),
     path('contacto/', views.contacto, name="Contacto"),
     path('formulario/', views.formulario, name="Formulario"),
     path('ejemplo/', views.ejemplo, name="Ejemplo"),
-    path('comentario/',views_registros.registros, name="Comentario"),
+    path('comentario/',views_registros.comentario, name="Comentario"),
     path('registrar/',views_registros.registrar,name="Registrar"),
+    path('eliminarComentario/<int:id>/',views_registros.eliminarComentarioContacto, name="Eliminar"),
 ]
 
 if settings.DEBUG:
