@@ -8,7 +8,7 @@ from .models import ComentarioContacto
 
 class AdministrarModelo(admin.ModelAdmin):
     readonly_fields = ('created','updated')
-    list_display= ('matricula', 'nombre', 'carrera', 'turno')
+    list_display= ('matricula', 'nombre', 'carrera', 'turno',"created")
     search_fields=('matricula', 'nombre', 'carrera', 'turno')
     date_hierarchy= 'created'
     list_filter=('carrera','turno')
@@ -36,9 +36,9 @@ class AdministrarComentarios(admin.ModelAdmin):
 admin.site.register(Comentario, AdministrarComentarios)
 
 class AdministrarComentariosContacto(admin.ModelAdmin):
-    ist_display = ('id', 'mensaje')
+    ist_display = ('id', 'mensaje','created')
     earch_fields = ('id','created')
     ate_hierarchy = 'created'
-    eadonly_fields = ('created', 'id')
+    readonly_fields = ('created', 'id')
     
 admin.site.register(ComentarioContacto, AdministrarComentariosContacto)
