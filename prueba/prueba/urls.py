@@ -42,6 +42,7 @@ urlpatterns = [
     path('comentario4/',views_registros.comentario4,name="comentarioConsultas"),
     path('comentario5/',views_registros.comentario5,name="comentarioConsultas"),
     path('subir/',views_registros.archivos,name="Subir"),
+    path('consultasSQL',views_registros.consultasSQL,name="sql"),
 
 
 
